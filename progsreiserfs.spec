@@ -69,7 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install include/reiserfs/libprogs_tools.h $RPM_BUILD_ROOT/%{_includedir}/reiserfs
+install include/reiserfs/libprogs_tools.h $RPM_BUILD_ROOT%{_includedir}/reiserfs
 
 %clean
 rm -rf $RPM_BUILD_ROOT
