@@ -1,0 +1,77 @@
+--- progsreiserfs-0.3.1-rc8/libreiserfs/tools.c.orig	2002-12-12 12:32:35.000000000 +0000
++++ progsreiserfs-0.3.1-rc8/libreiserfs/tools.c	2003-11-13 22:04:38.000000000 +0000
+@@ -10,7 +10,7 @@
+ #include <config.h>
+ #endif
+ 
+-#if defined(__sparc__) || defined(__sparcv9)
++#if (defined(__sparc__) || defined(__sparcv9)) && !defined(__linux__)
+ #  include <sys/int_types.h>
+ #elif defined(__freebsd__)
+ #  include <inttypes.h>
+--- progsreiserfs-0.3.1-rc8/libreiserfs/object.c.orig	2002-12-12 12:32:35.000000000 +0000
++++ progsreiserfs-0.3.1-rc8/libreiserfs/object.c	2003-11-13 22:08:19.000000000 +0000
+@@ -50,7 +50,7 @@
+ #include <string.h>
+ #include <unistd.h>
+ 
+-#if defined(__sparc__) || defined(__sparcv9)
++#if (defined(__sparc__) || defined(__sparcv9)) && !defined(__linux__)
+ #  include <reiserfs/strsep.h>
+ #endif
+ 
+--- progsreiserfs-0.3.1-rc8/include/reiserfs/key.h.orig	2002-12-12 12:32:37.000000000 +0000
++++ progsreiserfs-0.3.1-rc8/include/reiserfs/key.h	2003-11-13 21:59:02.000000000 +0000
+@@ -12,7 +12,7 @@
+ #ifndef KEY_H
+ #define KEY_H
+ 
+-#if defined(__sparc__) || defined(__sparcv9)
++#if (defined(__sparc__) || defined(__sparcv9)) && !defined(__linux__)
+ #  include <sys/int_types.h>
+ #elif defined(__freebsd__)
+ #  include <inttypes.h>
+--- progsreiserfs-0.3.1-rc8/include/reiserfs/reiserfs.h.orig	2002-12-12 12:32:37.000000000 +0000
++++ progsreiserfs-0.3.1-rc8/include/reiserfs/reiserfs.h	2003-11-13 21:57:54.000000000 +0000
+@@ -15,7 +15,7 @@
+ #include <config.h>
+ #endif
+ 
+-#if defined(__sparc__) || defined(__sparcv9)
++#if (defined(__sparc__) || defined(__sparcv9)) && !defined(__linux__)
+ #  include <sys/int_types.h>
+ #elif defined(__freebsd__)
+ #  include <inttypes.h>
+--- progsreiserfs-0.3.1-rc8/include/reiserfs/endian.h.orig	2002-12-12 12:32:37.000000000 +0000
++++ progsreiserfs-0.3.1-rc8/include/reiserfs/endian.h	2003-11-13 21:59:22.000000000 +0000
+@@ -10,7 +10,7 @@
+ #  include <config.h>
+ #endif
+ 
+-#if defined(__sparc__) || defined(__sparcv9)
++#if (defined(__sparc__) || defined(__sparcv9)) && !defined(__linux__)
+ #  include <sys/int_types.h>
+ #elif defined(__freebsd__)
+ #  include <inttypes.h>
+--- progsreiserfs-0.3.1-rc8/include/reiserfs/node.h.orig	2002-12-12 12:32:37.000000000 +0000
++++ progsreiserfs-0.3.1-rc8/include/reiserfs/node.h	2003-11-13 21:59:37.000000000 +0000
+@@ -7,7 +7,7 @@
+ #ifndef NODE_H
+ #define NODE_H
+ 
+-#if defined(__sparc__) || defined(__sparcv9)
++#if (defined(__sparc__) || defined(__sparcv9)) && !defined(__linux__)
+ #  include <sys/int_types.h>
+ #elif defined(__freebsd__)
+ #  include <inttypes.h>
+--- progsreiserfs-0.3.1-rc8/include/reiserfs/hashes.h.orig	2002-12-12 12:32:37.000000000 +0000
++++ progsreiserfs-0.3.1-rc8/include/reiserfs/hashes.h	2003-11-13 21:59:53.000000000 +0000
+@@ -8,7 +8,7 @@
+ #ifndef HASHES_H
+ #define HASHES_H
+ 
+-#if defined(__sparc__) || defined(__sparcv9)
++#if (defined(__sparc__) || defined(__sparcv9)) && !defined(__linux__)
+ #  include <sys/int_types.h>
+ #elif defined(__freebsd__)
+ #  include <inttypes.h>
