@@ -1,4 +1,4 @@
-%define         _rc         rc7
+%define         _rc         rc8
 Summary:	Programs needed for manipulating reiserfs partitions
 Summary(pl):	Programy niezbêdne do manipulowania partycjami reiserfs
 Name:		progsreiserfs
@@ -65,6 +65,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+install include/reiserfs/libprogs_tools.h $RPM_BUILD_ROOT/%{_includedir}/reiserfs
 
 %clean
 rm -rf $RPM_BUILD_ROOT
