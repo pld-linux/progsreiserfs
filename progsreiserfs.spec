@@ -12,6 +12,7 @@ Patch0:		%{name}-Werror.patch
 URL:		http://reiserfs.linux.kiev.ua/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	libtool >= 1:1.4.2-9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -55,6 +56,7 @@ Biblioteki statyczne do reiserfs.
 %build
 # supplied libtool is broken (relink)
 %{__libtoolize}
+%{__gettextize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
