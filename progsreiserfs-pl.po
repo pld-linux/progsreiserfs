@@ -1,0 +1,770 @@
+# Polish translation for progsreiserfs.
+# Copyright (C) 2003 Free Software Foundation, Inc.
+# Jakub Bogusz <qboosh@pld-linux.org>, 2003.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: progsreiserfs 0.3.1-rc8\n"
+"POT-Creation-Date: 2002-12-12 15:38+0300\n"
+"PO-Revision-Date: 2003-12-28 00:05+0100\n"
+"Last-Translator: Jakub Bogusz <qboosh@pld-linux.org>\n"
+"Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-2\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: progsreiserfs/mkfs/mkfs.c:37
+msgid "Usage: mkfs.reiserfs [ options ] device [ size[K|M|G] ]\n"
+msgstr "Sk³adnia: mkfs.reiserfs [ opcje ] urz±dzenie [ rozmiar[K|M|G] ]\n"
+
+#: progsreiserfs/mkfs/mkfs.c:38
+msgid ""
+"Options:\n"
+"  -v | --version                  prints current version\n"
+"  -u | --usage                    prints program usage\n"
+"  -s N | --journal-size=N         journal size\n"
+"  -o N | --journal-offset=N       journal offset for relocated journal\n"
+msgstr ""
+"Opcje:\n"
+"  -v | --version                  wy¶wietlenie informacji o wersji\n"
+"  -u | --usage                    wy¶wietlenie sk³adni wywo³ania programu\n"
+"  -s N | --journal-size=N         rozmiar kroniki\n"
+"  -o N | --journal-offset=N       offset kroniki dla kroniki przemieszczonej\n"
+
+#: progsreiserfs/mkfs/mkfs.c:44
+msgid ""
+"  -t N | --transaction-max-size=N maximal transaction size\n"
+"  -b N | --block-size=N           block size (1024, 2048, 4096...)\n"
+"  -f FORMAT | --format=FORMAT     reiserfs version (3.5 or 3.6)\n"
+"  -h HASH | --hash=HASH           hash function (tea, yura or r5)\n"
+"  -j FILE | --journal-device=FILE journal device for separated journal\n"
+msgstr ""
+"  -t N | --transaction-max-size=N maksymalny rozmiar transakcji\n"
+"  -b N | --block-size=N           rozmiar bloku (1024, 2048, 4096...)\n"
+"  -f FORMAT | --format=FORMAT     wersja reiserfs (3.5 lub 3.6)\n"
+"  -h HASZ | --hash=HASZ           funkcja haszuj±ca (tea, yura lub r5)\n"
+"  -j PLIK | --journal-device=PLIK urz±dzenie kroniki dla kroniki wydzielonej\n"
+
+#: progsreiserfs/mkfs/mkfs.c:50
+msgid ""
+"  -l LABEL | --label=LABEL        volume label\n"
+"  -d UUID | --uuid=UUID           sets universally unique identifier\n"
+"  -q | --quiet                    non-interactive mode\n"
+msgstr ""
+"  -l ETYKIETA | --label=ETYKIETA  etykieta wolumenu\n"
+"  -d UUID | --uuid=UUID           ustawienie unikalnego identyfikatora\n"
+"  -q | --quiet                    tryb nieinteraktywny\n"
+
+#: progsreiserfs/mkfs/mkfs.c:112
+#, c-format
+msgid "For kernel %s recomended version of reiserfs is %s, but selected %s."
+msgstr "Dla j±dra %s zalecana wersja reiserfs to %s, ale wybrano %s."
+
+#: progsreiserfs/mkfs/mkfs.c:186
+#, c-format
+msgid "Invalid blocksize (%s)."
+msgstr "Nieprawid³owy rozmiar bloku (%s)."
+
+#: progsreiserfs/mkfs/mkfs.c:191
+#, c-format
+msgid "Invalid blocksize (%s). Must be 1024, 2048..."
+msgstr "Nieprawid³owy rozmiar bloku (%s). Musi byæ 1024, 2048..."
+
+#: progsreiserfs/mkfs/mkfs.c:196
+msgid "Invalid block size. It must power of two."
+msgstr "Nieprawid³owy rozmiar bloku. Musi byæ potêg± dwójki."
+
+#: progsreiserfs/mkfs/mkfs.c:204
+#, c-format
+msgid "Invalid hash function (%s)."
+msgstr "Nieprawid³owa funkcja haszuj±ca (%s)."
+
+#: progsreiserfs/mkfs/mkfs.c:212
+msgid "Invalid filesystem format. Use 3.5 or 3.6 please."
+msgstr "Nieprawid³owy format systemu plików. Proszê u¿yæ 3.5 lub 3.6."
+
+#: progsreiserfs/cpfs/cpfs.c:76 progsreiserfs/cpfs/cpfs.c:113
+#: progsreiserfs/cpfs/cpfs.c:119 progsreiserfs/fsck/fsck.c:76
+#: progsreiserfs/fsck/fsck.c:101 progsreiserfs/mkfs/mkfs.c:221
+#: progsreiserfs/mkfs/mkfs.c:307 progsreiserfs/resizefs/resizefs.c:100
+#: progsreiserfs/resizefs/resizefs.c:134 progsreiserfs/resizefs/resizefs.c:143
+#: progsreiserfs/tunefs/tunefs.c:103 progsreiserfs/tunefs/tunefs.c:111
+#: progsreiserfs/tunefs/tunefs.c:174
+#, c-format
+msgid "Device %s doesn't exists or invalid."
+msgstr "Urz±dzenie %s nie istnieje lub jest niew³a¶ciwe."
+
+#: progsreiserfs/mkfs/mkfs.c:229 progsreiserfs/tunefs/tunefs.c:119
+#, c-format
+msgid "Invalid journal size (%s)."
+msgstr "Nieprawid³owy rozmiar kroniki (%s)."
+
+#: progsreiserfs/mkfs/mkfs.c:237 progsreiserfs/tunefs/tunefs.c:127
+#, c-format
+msgid "Invalid journal offset (%s)."
+msgstr "Nieprawid³owy offset kroniki (%s)."
+
+#: progsreiserfs/mkfs/mkfs.c:245 progsreiserfs/tunefs/tunefs.c:135
+#, c-format
+msgid "Invalid transaction max size (%s)."
+msgstr "Nieprawid³owy maksymalny rozmiar transakcji (%s)."
+
+#: progsreiserfs/mkfs/mkfs.c:257 progsreiserfs/tunefs/tunefs.c:143
+#, c-format
+msgid "Invalid uuid (%s)."
+msgstr "Nieprawid³owy uuid (%s)."
+
+#: progsreiserfs/mkfs/mkfs.c:299
+#, c-format
+msgid "Invalid filesystem size (%s)."
+msgstr "Nieprawid³owy rozmiar systemu plików (%s)."
+
+#: progsreiserfs/cpfs/cpfs.c:128 progsreiserfs/cpfs/cpfs.c:165
+#: progsreiserfs/mkfs/mkfs.c:314 progsreiserfs/mkfs/mkfs.c:325
+#: progsreiserfs/resizefs/resizefs.c:152 progsreiserfs/resizefs/resizefs.c:164
+#: progsreiserfs/tunefs/tunefs.c:181 progsreiserfs/tunefs/tunefs.c:193
+#: progsreiserfs/tunefs/tunefs.c:208
+#, c-format
+msgid "Couldn't open device %s. %s."
+msgstr "Nie mo¿na otworzyæ urz±dzenia %s. %s."
+
+#: progsreiserfs/mkfs/mkfs.c:328
+#, c-format
+msgid " and %s"
+msgstr " i %s"
+
+#: progsreiserfs/mkfs/mkfs.c:339
+#, c-format
+msgid "Filesystem size is too big for device (%lu)."
+msgstr "System plików zbyt du¿y dla urz±dzenia (%lu)."
+
+#: progsreiserfs/mkfs/mkfs.c:345
+msgid "Filesystem with journal on host device has been selected. Parameter journal-offset will be ignored."
+msgstr "Wybrano system plików z kronik± na tym samym urz±dzeniu. Parametr journal-offset bêdzie zignorowany."
+
+#: progsreiserfs/mkfs/mkfs.c:358
+#, c-format
+msgid "Can't allocate journal (%lu - %lu) outside the device (%lu)."
+msgstr "Nie mo¿na przydzieliæ kroniki (%lu - %lu) poza urz±dzeniem (%lu)."
+
+#: progsreiserfs/mkfs/mkfs.c:380
+msgid "Sorry, reiserfs 3.5 doesn't supports uuid and label."
+msgstr "Niestety reiserfs 3.5 nie obs³uguje uuidów ani etykiet."
+
+#: progsreiserfs/cpfs/cpfs.c:171 progsreiserfs/mkfs/mkfs.c:391
+#: progsreiserfs/resizefs/resizefs.c:221 progsreiserfs/tunefs/tunefs.c:245
+msgid "Please select (y/n) "
+msgstr "Proszê wybraæ (y/n) "
+
+#: progsreiserfs/mkfs/mkfs.c:392
+#, c-format
+msgid "All data on %s%s will be lost. Do you really want to create %s (y/n) "
+msgstr "Wszystkie dane na %s%s zostan± utracone. Czy naprawdê utworzyæ %s (y/n) "
+
+#: progsreiserfs/mkfs/mkfs.c:400
+#, c-format
+msgid "Creating %s with %s journal on %s%s\n"
+msgstr "Tworzenie %s z kronik± %s na %s%s\n"
+
+#: progsreiserfs/mkfs/mkfs.c:401
+msgid "relocated"
+msgstr "przemieszczon±"
+
+#: progsreiserfs/mkfs/mkfs.c:402
+msgid "standard"
+msgstr "standardow±"
+
+#: progsreiserfs/mkfs/mkfs.c:415
+#, c-format
+msgid "Couldn't create filesystem on %s."
+msgstr "Nie mo¿na utworzyæ systemu plików na %s."
+
+#: progsreiserfs/cpfs/cpfs.c:197 progsreiserfs/mkfs/mkfs.c:424
+#: progsreiserfs/resizefs/resizefs.c:251 progsreiserfs/tunefs/tunefs.c:312
+msgid "syncing"
+msgstr "synchronizacja"
+
+#: progsreiserfs/resizefs/resizefs.c:32
+msgid ""
+"Usage: resizefs.reiserfs [ options ] DEV [+|-]size[K|M|G]\n"
+"Usage: resizefs.reiserfs [ options ] FILE start[K|M|G] end[K|M|G]\n"
+"Options:\n"
+"  -v | --version                  prints current version\n"
+"  -u | --usage                    prints program usage\n"
+"  -j FILE | --journal-device=FILE journal device for separated journal\n"
+"  -n | --no-journal-available     no journal device available now\n"
+"  -f | --force                    force resizer to resize partition anyway\n"
+"  -q | --quiet                    non-interactive mode\n"
+msgstr ""
+"Sk³adnia: resizefs.reiserfs [ opcje ] URZ¡DZENIE [+|-]rozmiar[K|M|G]\n"
+"     lub: resizefs.reiserfs [ opcje ] PLIK pocz±tek[K|M|G] koniec[K|M|G]\n"
+"Opcje:\n"
+"  -v | --version                  wy¶wietlenie informacji o wersji\n"
+"  -u | --usage                    wy¶wietlenie sk³adni wywo³ania programu\n"
+"  -j PLIK | --journal-device=PLIK urz±dzenie kroniki dla kroniki wydzielonej\n"
+"  -n | --no-journal-available     bez aktualnie dostêpnego urz±dzenia kroniki\n"
+"  -f | --force                    wymuszenie zmiany rozmiaru mimo wszystko\n"
+"  -q | --quiet                    tryb nieinteraktywny\n"
+
+#: progsreiserfs/cpfs/cpfs.c:157 progsreiserfs/resizefs/resizefs.c:174
+#: progsreiserfs/tunefs/tunefs.c:218
+#, c-format
+msgid "Couldn't open reiserfs on device %s."
+msgstr "Nie mo¿na otworzyæ reiserfs na urz±dzeniu %s."
+
+#: progsreiserfs/resizefs/resizefs.c:182
+#, c-format
+msgid "Invalid \"start\" modificator (%s)."
+msgstr "B³êdny modyfikator \"pocz±tek\" (%s)."
+
+#: progsreiserfs/resizefs/resizefs.c:190
+#, c-format
+msgid "Invalid \"end\" modificator (%s)."
+msgstr "B³êdy modyfikator \"koniec\" (%s)."
+
+#: progsreiserfs/resizefs/resizefs.c:199
+#, c-format
+msgid "Invalid filesystem size (%d)."
+msgstr "Nieprawid³owy rozmiar systemu plików (%d)."
+
+#: progsreiserfs/resizefs/resizefs.c:214
+msgid "Can't resize filesystem outside the device."
+msgstr "Nie mo¿na zmieniæ rozmiaru systemu plików poza urz±dzenie."
+
+#: progsreiserfs/resizefs/resizefs.c:222 progsreiserfs/tunefs/tunefs.c:246
+msgid "Are you ready (y/n) "
+msgstr "Mo¿na zaczynaæ (y/n) "
+
+#: progsreiserfs/resizefs/resizefs.c:229
+#, c-format
+msgid "Resizing %s\n"
+msgstr "Zmiana rozmiaru %s\n"
+
+#: progsreiserfs/resizefs/resizefs.c:241
+#, c-format
+msgid "Couldn't resize filesystem on %s to %lu - %lu blocks."
+msgstr "Nie mo¿na zmieniæ rozmiaru systemu plików na %s na bloki %lu - %lu."
+
+#: progsreiserfs/cpfs/cpfs.c:32
+msgid ""
+"Usage: cpfs.reiserfs [ options ] SRC DEST\n"
+"Options:\n"
+"  -v | --version                  prints current version\n"
+"  -u | --usage                    prints program usage\n"
+"  -j FILE | --journal-device=FILE journal device for separated journal\n"
+"  -n | --no-journal-available     no journal device available now\n"
+"  -q | --quiet                    non-interactive mode\n"
+msgstr ""
+"Sk³adnia: cpfs.reiserfs [ opcje ] ¬RÓD£O CEL\n"
+"Opcje:\n"
+"  -v | --version                  wy¶wietlenie informacji o wersji\n"
+"  -u | --usage                    wy¶wietlenie sk³adni wywo³ania programu\n"
+"  -j PLIK | --journal-device=PLIK urz±dzenie kroniki dla kroniki wydzielonej\n"
+"  -n | --no-journal-available     bez aktualnie dostêpnego urz±dzenia kroniki\n"
+"  -q | --quiet                    tryb nieinteraktywny\n"
+
+#: progsreiserfs/cpfs/cpfs.c:106
+msgid "Source and destination devices are equal."
+msgstr "Urz±dzenie docelowe jest równe ¼ród³owemu."
+
+#: progsreiserfs/cpfs/cpfs.c:135
+msgid "Source filesystem journal device and destination device are equal."
+msgstr "Urz±dzenie docelowe jest równe urz±dzeniu kroniki ¼ród³owego systemu plików."
+
+#: progsreiserfs/cpfs/cpfs.c:146
+#, c-format
+msgid "Couldn't open device for source journal %s. %s."
+msgstr "Nie mo¿na otworzyæ urz±dzenia kroniki ¼ród³owej %s. %s."
+
+#: progsreiserfs/cpfs/cpfs.c:172
+#, c-format
+msgid "All data on %s will be lost. Do you realy want to copy %s to %s (y/n) "
+msgstr "Wszystkie dane na %s zostan± utracone. Czy naprawdê skopiowaæ %s do %s (y/n) "
+
+#: progsreiserfs/cpfs/cpfs.c:180
+#, c-format
+msgid "Copying %s to %s\n"
+msgstr "Kopiowanie %s do %s\n"
+
+#: progsreiserfs/cpfs/cpfs.c:190
+#, c-format
+msgid "Couldn't copy %s to %s."
+msgstr "Nie mo¿na skopiowaæ %s do %s."
+
+#: progsreiserfs/tunefs/tunefs.c:32
+msgid "Usage: tunefs.reiserfs options device\n"
+msgstr "Sk³adnia: tunefs.reiserfs opcje urz±dzenie\n"
+
+#: progsreiserfs/tunefs/tunefs.c:33
+msgid ""
+"Options:\n"
+"  -v | --version                      prints current version\n"
+"  -u | --usage                        prints program usage\n"
+"  -j FILE | --journal-device=FILE     device where journal is lies\n"
+"  -d FILE | --journal-new-device=FILE new journal device\n"
+"  -s N | --journal-size=N             journal size\n"
+"  -o N | --journal-offset=N           journal offset for relocated journal\n"
+"  -t N | --transaction-max-size=N     transaction max size\n"
+"  -n | --no-journal-available         no journal available now\n"
+msgstr ""
+"Opcje:\n"
+"  -v | --version                      wy¶wietlenie informacji o wersji\n"
+"  -u | --usage                        wy¶wietlenie sk³adni wywo³ania programu\n"
+"  -j PLIK | --journal-device=PLIK     urz±dzenie na którym znajduje siê kronika\n"
+"  -d PLIK | --journal-new-device=PLIK nowe urz±dzenie kroniki\n"
+"  -s N | --journal-size=N             rozmiar kroniki\n"
+"  -o N | --journal-offset=N           offset kroniki dla kroniki\n"
+"                                        przemieszczonej\n"
+"  -t N | --transaction-max-size=N     maksymalny rozmiar transakcji\n"
+"  -n | --no-journal-available         bez aktualnie dostêpnego urz±dzenia\n"
+"                                        kroniki\n"
+
+#: progsreiserfs/tunefs/tunefs.c:43
+msgid ""
+"  -l LABEL | --label=LABEL            sets volume label\n"
+"  -i UUID | --uuid=UUID               sets given uuid to superblock\n"
+"  -q | --quiet                        non-interactive mode\n"
+msgstr ""
+"  -l ETYKIETA | --label=ETYKIETA      etykieta wolumenu\n"
+"  -d UUID | --uuid=UUID               ustawienie unikalnego identyfikatora\n"
+"  -q | --quiet                        tryb nieinteraktywny\n"
+
+#: progsreiserfs/tunefs/tunefs.c:226
+#, c-format
+msgid "Invalid journal location parameters detected. Filesystem has %s journal, but specified %s journal."
+msgstr "Nieprawid³owe parametry po³o¿enia kroniki. System plików ma kronikê %s, a podano %s."
+
+#: progsreiserfs/tunefs/tunefs.c:239
+msgid "Filesystem doesn't needed tunning."
+msgstr "System plików nie potrzebuje tuningu."
+
+#: progsreiserfs/tunefs/tunefs.c:276
+#, c-format
+msgid "Tunning %s\n"
+msgstr "Tuning %s\n"
+
+#: progsreiserfs/tunefs/tunefs.c:289
+msgid "Couldn't tune filesystem."
+msgstr "Nie mo¿na dostroiæ systemu plików."
+
+#: progsreiserfs/tunefs/tunefs.c:299
+msgid "Sorry, label and uuid not supported for reiserfs 3.5."
+msgstr "Niestety etykieta i uuid nie s± obs³ugiwane przez reiserfs 3.5."
+
+#: progsreiserfs/fsck/fsck.c:33
+msgid ""
+"Usage: fsck.reiserfs [ options ] device\n"
+"Options:\n"
+"  -v | --version                  prints current version\n"
+"  -u | --usage                    prints program usage\n"
+"  -j FILE | --journal-device=FILE journal device for separated journal\n"
+"  -n | --no-journal-available     no journal device available now\n"
+msgstr ""
+"Sk³adnia: fsck.reiserfs [ opcje ] urz±dzenie\n"
+"Opcje:\n"
+"  -v | --version                  wy¶wietlenie informacji o wersji\n"
+"  -u | --usage                    wy¶wietlenie sk³adni wywo³ania programu\n"
+"  -j PLIK | --journal-device=PLIK urz±dzenie kroniki dla kroniki wydzielonej\n"
+"  -n | --no-journal-available     bez aktualnie dostêpnego urz±dzenia kroniki\n"
+
+#: progsreiserfs/fsck/fsck.c:109
+#, c-format
+msgid "Couldn't open device device %s."
+msgstr "Nie mo¿na otworzyæ urz±dzenia %s."
+
+#: progsreiserfs/fsck/fsck.c:121
+#, c-format
+msgid "Couldn't open device %s."
+msgstr "Nie mo¿na otworzyæ urz±dzenia %s."
+
+#: progsreiserfs/fsck/fsck.c:132
+msgid "Sorry, not implemented yet!"
+msgstr "Niestety jeszcze nie zaimplementowane!"
+
+#: progsreiserfs/libmisc/tools.c:118
+#, c-format
+msgid "Device %s isn't a block device."
+msgstr "Urz±dzenie %s nie jest urz±dzeniem blokowym."
+
+#: libreiserfs/exception.c:33
+msgid "Information"
+msgstr "Informacja"
+
+#: libreiserfs/exception.c:34
+msgid "Warning"
+msgstr "Ostrze¿enie"
+
+#: libreiserfs/exception.c:35
+msgid "Error"
+msgstr "B³±d"
+
+#: libreiserfs/exception.c:36
+msgid "Fatal"
+msgstr "B³±d krytyczny"
+
+#: libreiserfs/exception.c:37
+msgid "Bug"
+msgstr "B³±d w kodzie"
+
+#: libreiserfs/exception.c:41
+msgid "Yes"
+msgstr "Tak"
+
+#: libreiserfs/exception.c:42
+msgid "No"
+msgstr "Nie"
+
+#: libreiserfs/exception.c:43
+msgid "OK"
+msgstr "OK"
+
+#: libreiserfs/exception.c:44
+msgid "Retry"
+msgstr "Ponów"
+
+#: libreiserfs/exception.c:45
+msgid "Ignore"
+msgstr "Zignoruj"
+
+#: libreiserfs/exception.c:46
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: libreiserfs/exception.c:71
+#, c-format
+msgid "A bug has been detected in libreiserfs. Please email a bug report to torque@ukrpost.net containing the version (%s) and the following message: "
+msgstr "Wykryto b³±d w kodzie libreiserfs. Proszê wys³aæ poczt± elektroniczn± na adres torque@ukrpost.net raport zawieraj±cy wersjê (%s) i nastêpuj±cy komunikat: " 
+
+#: libreiserfs/debug.c:27
+#, c-format
+msgid "Assertion (%s) at %s:%d in function %s() failed."
+msgstr "Zapewnienie (%s) w %s:%d w funkcji %s() zawiod³o."
+
+#: libreiserfs/libreiserfs.c:73
+#, c-format
+msgid "Can't allocate %d bytes. Invalid \"malloc\" handler."
+msgstr "Nie mo¿na przydzieliæ %d bajtów. Nieprawid³owa procedura obs³ugi \"malloc\"."
+
+#: libreiserfs/libreiserfs.c:79 libreiserfs/libreiserfs.c:116
+msgid "Out of memory."
+msgstr "Brak pamiêci."
+
+#: libreiserfs/libreiserfs.c:109
+#, c-format
+msgid "Can't reallocate given chunk for %d bytes. Invalid \"realloc\" handler."
+msgstr "Nie mo¿na zmieniæ rozmiaru bloku na %d bajtów. Nieprawid³owa procedura obs³ugi \"realloc\"."
+
+#: libreiserfs/libreiserfs.c:134
+msgid "Can't free given chunk. Invalid \"free\" handler."
+msgstr "Nie mo¿na zwolniæ bloku. Nieprawid³owa procedura obs³ugi \"free\"."
+
+#: libreiserfs/core.c:31
+msgid "Bitmap isn't opened. Possible filesystem was opened in the \"fast\" maner."
+msgstr "Bitmapa nie jest otwarta mo¿liwe, ¿e system plików by³ otwarty w trybie \"fast\"."
+
+#: libreiserfs/core.c:112
+msgid "Can't change start of the standard journal."
+msgstr "Nie mo¿na zmieniæ pocz±tku kroniki standardowej."
+
+#: libreiserfs/core.c:126
+msgid "There are non-replayed transaction in old journal, check filesystem consistency first."
+msgstr "W starej kronice znajduj± siê nieodtworzone transakcje, nale¿y najpierw sprawdziæ spójno¶æ systemu plików."
+
+#: libreiserfs/core.c:159
+#, c-format
+msgid "Not enought free space on host device for %lu blocks of journal."
+msgstr "Zbyt ma³o wolnego miejsca na urz±dzeniu dla %lu bloków kroniki."
+
+#: libreiserfs/core.c:178
+msgid "relocating occupied area"
+msgstr "przemieszczanie zajêtego obszaru"
+
+#: libreiserfs/core.c:319 libreiserfs/core.c:368
+msgid "Journal already opened."
+msgstr "Kronika ju¿ otwarta."
+
+#: libreiserfs/core.c:328
+#, c-format
+msgid "Journal kind mismatch has detected. Filesystem has %s journal, but specified %s journal."
+msgstr "Wykryto niezgodno¶æ rodzaju kroniki. System plików ma kronikê %s, a podano %s."
+
+#: libreiserfs/core.c:339
+msgid "Couldn't open journal."
+msgstr "Nie mo¿na otworzyæ kroniki."
+
+#: libreiserfs/core.c:381
+msgid "Couldn't create journal."
+msgstr "Nie mo¿na utworzyæ kroniki."
+
+#: libreiserfs/core.c:421 libreiserfs/core.c:438
+msgid "Journal isn't opened."
+msgstr "Kronika nie jest otwarta."
+
+#: libreiserfs/core.c:534 libreiserfs/core.c:555
+msgid "Bitmap already opened."
+msgstr "Bitmapa jest ju¿ otwarta."
+
+#: libreiserfs/core.c:541
+msgid "Couldn't open bitmap."
+msgstr "Nie mo¿na otworzyæ bitmapy."
+
+#: libreiserfs/core.c:563
+msgid "Couldn't create bitmap."
+msgstr "Nie mo¿na utworzyæ bitmapy."
+
+#: libreiserfs/core.c:588
+#, c-format
+msgid "Couldn't resize bitmap to (%lu - %lu) blocks."
+msgstr "Nie mo¿na zmieniæ rozmiaru bitmapy na (%lu - %lu) bloków."
+
+#: libreiserfs/core.c:669
+#, c-format
+msgid "Journal relocation flags mismatch. Journal device: %x, magic: %s."
+msgstr "Niezgodno¶æ flag przemieszczenia kroniki. Urz±dzenie kroniki: %x, znacznik: %s."
+
+#: libreiserfs/core.c:676
+#, c-format
+msgid "Superblock has an invalid block count %lu for device length %lu blocks."
+msgstr "Superblok ma nieprawid³ow± liczbê bloków %lu dla urz±dzenia o d³ugo¶ci %lu bloków."
+
+#: libreiserfs/core.c:695
+#, c-format
+msgid "Reading block %lu for blocksize %d failed. %s."
+msgstr "Odczyt bloku %lu dla rozmiaru bloku %d nie powiód³ siê. %s."
+
+#: libreiserfs/core.c:707
+#, c-format
+msgid "Invalid blocksize %d. It must power of two."
+msgstr "Nieprawid³owy rozmiar bloku %d. Musi byæ potêg± dwójki."
+
+#: libreiserfs/core.c:740
+msgid "Superblock already opened."
+msgstr "Superblok ju¿ otwarty."
+
+#: libreiserfs/core.c:748
+#, c-format
+msgid "Couldn't reopen superblock from journal. %s."
+msgstr "Nie mo¿na ponownie otworzyæ superbloku z kroniki. %s."
+
+#: libreiserfs/core.c:758
+msgid "Invalid superblock has read from the journal."
+msgstr "Superblok odczytany z kroniki jest nieprawid³owy."
+
+#: libreiserfs/core.c:808
+msgid "initializing skiped area"
+msgstr "inicjalizacja pominiêtego obszaru"
+
+#: libreiserfs/core.c:974
+msgid "Can't resize old format filesystem."
+msgstr "Nie mo¿na zmieniæ rozmiaru systemu plików w starym formacie."
+
+#: libreiserfs/core.c:982
+msgid "Filesystem isn't in valid state. May be it is not cleanly unmounted."
+msgstr "System plików nie znajduje siê w prawid³owym stanie. Móg³ nie byæ czysto odmontowany."
+
+#: libreiserfs/core.c:1009
+msgid "relocating metadata"
+msgstr "przemieszczanie metadanych"
+
+#: libreiserfs/core.c:1044 libreiserfs/core.c:1167
+msgid "shrinking"
+msgstr "zmniejszanie"
+
+#: libreiserfs/core.c:1067
+msgid "New boundaries are the same as previous ones."
+msgstr "Nowe granice s± takie same jak poprzednie."
+
+#: libreiserfs/core.c:1073
+#, c-format
+msgid "Invalid boundaries: start=%ld, end=%ld"
+msgstr "B³êdne granice: pocz±tek=%ld, koniec=%ld"
+
+#: libreiserfs/core.c:1087 libreiserfs/core.c:1151
+msgid "Can't shrink filesystem. Too many blocks already allocated."
+msgstr "Nie mo¿na zmniejszyæ systemu plików. Zbyt du¿o bloków ju¿ przydzielono."
+
+#: libreiserfs/core.c:1196 libreiserfs/core.c:1617
+#, c-format
+msgid "Device is too small for (%lu) blocks."
+msgstr "Urz±dzenie jest zbyt ma³e dla %lu bloków."
+
+#: libreiserfs/core.c:1233
+msgid "New size is the same as previous one."
+msgstr "Nowy rozmiar jest taki sam jak poprzedni."
+
+#: libreiserfs/core.c:1246 libreiserfs/core.c:1259
+msgid "Couldn't open reiserfs tree."
+msgstr "Nie mo¿na otworzyæ drzewa reiserfs."
+
+#: libreiserfs/core.c:1270
+msgid "Tree isn't opened."
+msgstr "Drzewo nie jest otwarte."
+
+#: libreiserfs/core.c:1303
+msgid "Filesystem isn't consistent. Couldn't open it for write."
+msgstr "System plików jest niespójny. Nie mo¿na otworzyæ go do zapisu."
+
+#: libreiserfs/core.c:1308
+msgid "Filesystem isn't consistent."
+msgstr "System plików jest niespójny."
+
+#: libreiserfs/core.c:1316
+msgid "Filesystem has journal on separate device, but specified host device."
+msgstr "System plików ma kronikê na oddzielnym urz±dzeniu, ale podano to samo urz±dzenie."
+
+#: libreiserfs/core.c:1330
+msgid "Journal was not opened. Journal tuning is needed."
+msgstr "Kronika nie by³a otwarta. Wymagany tuning kroniki."
+
+#: libreiserfs/core.c:1412
+#, c-format
+msgid "Block size isn't power of two (%d)."
+msgstr "Rozmiar bloku nie jest potêg± dwójki (%d)."
+
+#: libreiserfs/core.c:1418
+#, c-format
+msgid "Block size is too small (%d)."
+msgstr "Rozmiar bloku jest zbyt ma³y (%d)."
+
+#: libreiserfs/core.c:1424
+#, c-format
+msgid "Block size is too big (%d)."
+msgstr "Rozmiar bloku jest zbyt du¿y (%d)."
+
+#: libreiserfs/core.c:1430
+#, c-format
+msgid "Invalid filesystem size (%lu)."
+msgstr "Nieprawid³owy rozmiar systemu plików (%lu)."
+
+#: libreiserfs/core.c:1437
+#, c-format
+msgid "Filesystem is too big for device (%lu)."
+msgstr "System plików jest zbyt du¿y dla urz±dzenia (%lu)."
+
+#: libreiserfs/core.c:1446
+#, c-format
+msgid "Size of file system is too small. It must be at least (%lu) blocks."
+msgstr "Rozmiar systemu plików jest zbyt ma³y. Musi wynosiæ przynajmniej %lu bloków."
+
+#: libreiserfs/core.c:1487
+msgid "Couldn't create superblock."
+msgstr "Nie mo¿na utworzyæ superbloku."
+
+#: libreiserfs/core.c:1526
+msgid "Couldn't synchronize filesystem."
+msgstr "Nie mo¿na zsynchronizowaæ systemu plików."
+
+#: libreiserfs/core.c:1600
+#, c-format
+msgid "Block sizes for source and destination devices are different. Source: %d, destination: %d."
+msgstr "Rozmiary bloków dla urz±dzenia ¼ród³owego i docelowego s± ró¿ne. ¬ród³owy: %d, docelowy: %d."
+
+#: libreiserfs/core.c:1608
+msgid "Source filesystem isn't consistent."
+msgstr "¬ród³owy system plików jest niespójny."
+
+#: libreiserfs/core.c:1646
+msgid "copying"
+msgstr "kopiowanie"
+
+#: libreiserfs/journal.c:138
+#, c-format
+msgid "Invalid journal start (%lu) for journal on host device."
+msgstr "Nieprawid³owy pocz±tek kroniki (%lu) dla kroniki na tym samym urz±dzeniu"
+
+#: libreiserfs/journal.c:147
+#, c-format
+msgid "Journal size is too big (%lu). It must be smaller or equal %lu blocks for block size %d."
+msgstr "Rozmiar kroniki zbyt du¿y (%lu). Musi byæ mniejszy lub równy %lu bloków dla rozmiaru bloku %d."
+
+#: libreiserfs/journal.c:154
+#, c-format
+msgid "Journal size (%lu) is smaller minimal recomended (%lu)."
+msgstr "Rozmiar kroniki (%lu) jest mniejszy od minimalnego zalecanego (%lu)."
+
+#: libreiserfs/journal.c:195
+#, c-format
+msgid "Invalid start (%lu) for journal len %lu."
+msgstr "Nieprawid³owy pocz±tek (%lu) dla kroniki o d³ugo¶ci %lu."
+
+#: libreiserfs/journal.c:297 libreiserfs/journal.c:304
+msgid "Invalid journal parameters detected."
+msgstr "Wykryto nieprawid³owe parametry kroniki."
+
+#: libreiserfs/journal.c:315
+msgid "Couldn't stat journal device."
+msgstr "Nie mo¿na wykonaæ stat na urz±dzeniu kroniki."
+
+#: libreiserfs/journal.c:354
+msgid "initializing journal"
+msgstr "inicjalizacja kroniki"
+
+#: libreiserfs/journal.c:368
+msgid "Can't stat journal device."
+msgstr "Nie mo¿na wykonaæ stat na urz±dzeniu kroniki."
+
+#: libreiserfs/journal.c:492
+msgid "looking for transactions"
+msgstr "poszukiwanie transakcji"
+
+#: libreiserfs/key.c:86
+#, c-format
+msgid "Key type (%d) is too big."
+msgstr "Typ klucza (%d) zbyt du¿y."
+
+#: libreiserfs/object.c:219
+#, c-format
+msgid "Couldn't find stat data of object (%lu %lu)."
+msgstr "Nie mo¿na odnale¼æ danych stat dla obiektu (%lu %lu)."
+
+#: libreiserfs/object.c:261
+#, c-format
+msgid "Invalid key type detected %d."
+msgstr "Wykryto nieprawid³owy typ klucza %d."
+
+#: libreiserfs/object.c:310
+#, c-format
+msgid "Couldn't find stat data of directory %s."
+msgstr "Nie mo¿na odnale¼æ danych katalogu %s."
+
+#: libreiserfs/object.c:322
+#, c-format
+msgid "%s has invalid object type."
+msgstr "%s ma nieprawid³owy typ obiektu."
+
+#: libreiserfs/object.c:345
+#, c-format
+msgid "Couldn't follow link %s."
+msgstr "Nie mo¿na pod±¿yæ za dowi±zaniem %s."
+
+#: libreiserfs/object.c:375
+#, c-format
+msgid "Couldn't find entry %s."
+msgstr "Nie mo¿na odnale¼æ wpisu %s."
+
+#: libreiserfs/segment.c:66
+#, c-format
+msgid "Couldn't find free block inside allowed area (%lu - %lu)."
+msgstr "Nie mo¿na odnale¼æ wolnego bloku wewn±trz dozwolonego obszaru (%lu - %lu)."
+
+#: libreiserfs/file.c:35
+msgid "Can't open file for write on read only file system."
+msgstr "Nie mo¿na otworzyæ pliku do zapisu w systemie plików tylko do odczytu."
+
+#: libreiserfs/file.c:49
+#, c-format
+msgid "Sorry, %s isn't a regular file or link to file."
+msgstr "Niestety %s nie jest zwyk³ym plikiem ani dowi±zaniem do pliku."
+
+#: libreiserfs/file.c:215
+msgid "Couldn't find first file block."
+msgstr "Nie mo¿na odnale¼æ pierwszego bloku pliku."
+
+#: libreiserfs/dir.c:47
+#, c-format
+msgid "Sorry, %s isn't a directory."
+msgstr "Niestety %s nie jest katalogiem."
+
+#: libreiserfs/dir.c:79
+msgid "Couldn't find first directory block."
+msgstr "Nie mo¿na odnale¼æ pierwszego bloku katalogu."
