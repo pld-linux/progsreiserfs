@@ -3,7 +3,7 @@ Summary:	Programs needed for manipulating reiserfs partitions
 Summary(pl):	Programy niezbêdne do manipulowania partycjami reiserfs
 Name:		progsreiserfs
 Version:	0.3.1
-Release:	1.%{_rc}.1
+Release:	1.%{_rc}.2
 License:	GPL
 Group:		Applications/System
 Source0:	http://reiserfs.linux.kiev.ua/snapshots/%{name}-%{version}-%{_rc}.tar.gz
@@ -14,6 +14,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	libtool >= 1:1.4.2-9
+BuildRequires:	libuuid-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -42,6 +43,7 @@ operuj±cego na systemie plików reiserfs.
 Summary:	Static reiserfs software libraries
 Summary(pl):	Biblioteki statyczne do reiserfs
 Group:		Development/Libraries
+Requires:	%{name}-devel = %{version}
 
 %description static
 Static reiserfs software libraries.
