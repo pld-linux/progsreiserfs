@@ -3,16 +3,24 @@ Summary:	Programs needed for manipulating reiserfs partitions
 Summary(pl):	Programy niezbêdne do manipulowania partycjami reiserfs
 Name:		progsreiserfs
 Version:	0.3.1
-Release:	1
+Release:	1.%{_rc}.1
 License:	GPL
 Group:		Applications/System
 Source0:	http://reiserfs.linux.kiev.ua/snapshots/%{name}-%{version}-%{_rc}.tar.gz
+Patch0:		%{name}-Werror.patch
 URL:		http://reiserfs.linux.kiev.ua/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool >= 1:1.4.2-9
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Progsreiserfs is a package that allows you to create, destroy, resize
 and copy reiserfs filesystem.
+
+%description -l pl
+Progsreiserfs to pakiet pozwalaj±cy na tworzenie, niszczenie, zmianê
+rozmiaru i kopiowanie systemu plików reiserfs.
 
 %package devel
 Summary:	Header files and libraries to develop reiserfs software
@@ -40,18 +48,23 @@ Static reiserfs software libraries.
 Biblioteki statyczne do reiserfs.
 
 %prep
-%setup  -q -n %{name}-%{version}-%{_rc}
+%setup -q -n %{name}-%{version}-%{_rc}
+%patch -p1
 
 %build
-./configure
+# supplied libtool is broken (relink)
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__automake}
+%configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-		prefix=$RPM_BUILD_ROOT%{_prefix} \
-		mandir=$RPM_BUILD_ROOT%{_mandir}
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -61,19 +74,19 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README ChangeLog
-%attr(755,root,root) %{_sbindir}*
+%doc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
+%attr(755,root,root) %{_sbindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
 %{_mandir}/man8/*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/reiserfs
+%attr(755,root,root) %{_libdir}/*.so
+%{_libdir}/*.la
 %{_includedir}/dal
-%{_libexecdir}/*.la
-%{_aclocaldir}
-%attr(755,root,root) %{_libexecdir}/*.so
+%{_includedir}/reiserfs
+%{_aclocaldir}/*.m4
 
 %files static
 %defattr(644,root,root,755)
-%{_libexecdir}/*.a
+%{_libdir}/*.a
