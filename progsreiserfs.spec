@@ -1,5 +1,6 @@
 %define         _rc         rc7
 Summary:	Programs needed for manipulating reiserfs partitions
+Summary(pl):	Programy niezbêdne do manipulowania partycjami reiserfs
 Name:		progsreiserfs
 Version:	0.3.1
 Release:	1
@@ -15,7 +16,7 @@ and copy reiserfs filesystem.
 
 %package devel
 Summary:	Header files and libraries to develop reiserfs software
-Summary(pl):	Pliki nag³ówkowe i biblioteki
+Summary(pl):	Pliki nag³ówkowe i biblioteki do reiserfs
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
 
