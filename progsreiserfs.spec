@@ -3,15 +3,19 @@ Summary:	Programs needed for manipulating reiserfs partitions
 Summary(pl):	Programy niezbêdne do manipulowania partycjami reiserfs
 Name:		progsreiserfs
 Version:	0.3.1
-Release:	1.%{_rc}.3
+Release:	1.%{_rc}.4
 License:	GPL
 Group:		Applications/System
 Source0:	http://reiserfs.linux.kiev.ua/snapshots/%{name}-%{version}-%{_rc}.tar.gz
 # Source0-md5:	e545a171a207ec5b9045ceb1a982c1bd
+Source1:	%{name}-pl.po
 Patch0:		%{name}-Werror.patch
 Patch1:		%{name}-sparc-linux.patch
+Patch2:		%{name}-typo.patch
+Patch3:		%{name}-am18.patch
+Patch4:		%{name}-missing-nls.patch
 URL:		http://reiserfs.linux.kiev.ua/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	libtool >= 1:1.4.2-9
@@ -56,6 +60,12 @@ Biblioteki statyczne do reiserfs.
 %setup -q -n %{name}-%{version}-%{_rc}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
+%patch3 -p1
+%patch4 -p1
+
+cp -f %{SOURCE1} po/pl.po
+%{__perl} -pi -e 's/(ALL_LINGUAS=")/$1pl /' configure.in
 
 %build
 # supplied libtool is broken (relink)
@@ -75,13 +85,15 @@ rm -rf $RPM_BUILD_ROOT
 
 install include/reiserfs/libprogs_tools.h $RPM_BUILD_ROOT%{_includedir}/reiserfs
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %post   -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
 %attr(755,root,root) %{_sbindir}/*
