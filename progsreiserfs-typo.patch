@@ -1,0 +1,11 @@
+--- progsreiserfs-0.3.1-rc8/progsreiserfs/mkfs/mkfs.c.orig	2002-12-12 13:32:33.000000000 +0100
++++ progsreiserfs-0.3.1-rc8/progsreiserfs/mkfs/mkfs.c	2003-12-28 00:54:52.899770288 +0100
+@@ -389,7 +389,7 @@
+     choice = 'y';
+     if (!quiet) {
+         if (!(choice = progs_choose("ynYN", _("Please select (y/n) "), 
+-		_("All data on %s%s will be lost. Do you realy want to create %s "
++		_("All data on %s%s will be lost. Do you really want to create %s "
+ 		"(y/n) "), host_dev, mess_part, reiserfs_fs_long_format_str(format))))
+ 	    goto error_free_journal_dal;
+     }
