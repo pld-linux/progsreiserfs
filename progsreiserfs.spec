@@ -7,6 +7,7 @@ Release:	1.%{_rc}.1
 License:	GPL
 Group:		Applications/System
 Source0:	http://reiserfs.linux.kiev.ua/snapshots/%{name}-%{version}-%{_rc}.tar.gz
+# Source0-md5:	e545a171a207ec5b9045ceb1a982c1bd
 Patch0:		%{name}-Werror.patch
 URL:		http://reiserfs.linux.kiev.ua/
 BuildRequires:	autoconf
