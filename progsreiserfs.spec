@@ -3,12 +3,13 @@ Summary:	Programs needed for manipulating reiserfs partitions
 Summary(pl):	Programy niezbêdne do manipulowania partycjami reiserfs
 Name:		progsreiserfs
 Version:	0.3.1
-Release:	1.%{_rc}.2
+Release:	1.%{_rc}.3
 License:	GPL
 Group:		Applications/System
 Source0:	http://reiserfs.linux.kiev.ua/snapshots/%{name}-%{version}-%{_rc}.tar.gz
 # Source0-md5:	e545a171a207ec5b9045ceb1a982c1bd
 Patch0:		%{name}-Werror.patch
+Patch1:		%{name}-sparc-linux.patch
 URL:		http://reiserfs.linux.kiev.ua/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -53,7 +54,8 @@ Biblioteki statyczne do reiserfs.
 
 %prep
 %setup -q -n %{name}-%{version}-%{_rc}
-%patch -p1
+%patch0 -p1
+%patch1 -p1
 
 %build
 # supplied libtool is broken (relink)
