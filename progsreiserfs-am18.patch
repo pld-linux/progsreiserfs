@@ -1,0 +1,11 @@
+--- progsreiserfs-0.3.1-rc8/progsreiserfs.m4.orig	2002-12-12 13:32:34.000000000 +0100
++++ progsreiserfs-0.3.1-rc8/progsreiserfs.m4	2003-12-28 04:11:05.099123960 +0100
+@@ -10,7 +10,7 @@
+ dnl Adds the required libraries to $REISERFS_LIBS and does an
+ dnl AC_SUBST(REISERFS_LIBS)
+ 
+-AC_DEFUN(AC_CHECK_LIBREISERFS,
++AC_DEFUN([AC_CHECK_LIBREISERFS],
+ [
+ 
+ dnl save LIBS
