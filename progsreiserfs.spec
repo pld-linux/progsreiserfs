@@ -74,7 +74,8 @@ cp -f %{SOURCE1} po/pl.po
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	--disable-Werror
 %{__make}
 
 %install
