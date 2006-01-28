@@ -34,7 +34,7 @@ rozmiaru i kopiowanie systemu plików reiserfs.
 Summary:	Header files and libraries to develop reiserfs software
 Summary(pl):	Pliki nag³ówkowe i biblioteki do reiserfs
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files and libraries to develop software which operates on
@@ -48,7 +48,7 @@ operuj±cego na systemie plików reiserfs.
 Summary:	Static reiserfs software libraries
 Summary(pl):	Biblioteki statyczne do reiserfs
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static reiserfs software libraries.
