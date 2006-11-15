@@ -3,7 +3,7 @@ Summary:	Programs needed for manipulating reiserfs partitions
 Summary(pl):	Programy niezbêdne do manipulowania partycjami reiserfs
 Name:		progsreiserfs
 Version:	0.3.1
-Release:	1.%{_rc}.4
+Release:	1.%{_rc}.5
 License:	GPL
 Group:		Applications/System
 Source0:	http://reiserfs.linux.kiev.ua/snapshots/%{name}-%{version}-%{_rc}.tar.gz
@@ -86,6 +86,10 @@ rm -rf $RPM_BUILD_ROOT
 
 install include/reiserfs/libprogs_tools.h $RPM_BUILD_ROOT%{_includedir}/reiserfs
 
+# conflicts with reiserfsprogs
+rm -f $RPM_BUILD_ROOT%{_sbindir}/{fsck,mkfs,resizefs,tunefs}.reiserfs
+rm -f $RPM_BUILD_ROOT%{_mandir}/man8/{fsck,mkfs,resizefs,tunefs}.reiserfs.8
+
 %find_lang %{name}
 
 %clean
@@ -97,18 +101,19 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
-%attr(755,root,root) %{_sbindir}/*
+%attr(755,root,root) %{_sbindir}/cpfs.reiserfs
 %attr(755,root,root) %{_libdir}/lib*.so.*.*
-%{_mandir}/man8/*
+%{_mandir}/man8/cpfs.reiserfs.8*
+%{_mandir}/man8/reiserfs.8*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/*.so
-%{_libdir}/*.la
+%attr(755,root,root) %{_libdir}/lib*.so
+%{_libdir}/lib*.la
 %{_includedir}/dal
 %{_includedir}/reiserfs
 %{_aclocaldir}/*.m4
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/*.a
+%{_libdir}/lib*.a
