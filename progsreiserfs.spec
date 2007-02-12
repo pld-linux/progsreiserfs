@@ -1,6 +1,6 @@
 %define		_rc	rc8
 Summary:	Programs needed for manipulating reiserfs partitions
-Summary(pl):	Programy niezbêdne do manipulowania partycjami reiserfs
+Summary(pl.UTF-8):   Programy niezbÄ™dne do manipulowania partycjami reiserfs
 Name:		progsreiserfs
 Version:	0.3.1
 Release:	1.%{_rc}.5
@@ -26,13 +26,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Progsreiserfs is a package that allows you to create, destroy, resize
 and copy reiserfs filesystem.
 
-%description -l pl
-Progsreiserfs to pakiet pozwalaj±cy na tworzenie, niszczenie, zmianê
-rozmiaru i kopiowanie systemu plików reiserfs.
+%description -l pl.UTF-8
+Progsreiserfs to pakiet pozwalajÄ…cy na tworzenie, niszczenie, zmianÄ™
+rozmiaru i kopiowanie systemu plikÃ³w reiserfs.
 
 %package devel
 Summary:	Header files and libraries to develop reiserfs software
-Summary(pl):	Pliki nag³ówkowe i biblioteki do reiserfs
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe i biblioteki do reiserfs
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -40,20 +40,20 @@ Requires:	%{name} = %{version}-%{release}
 Header files and libraries to develop software which operates on
 reiserfs filesystems.
 
-%description devel -l pl
-Pliki nag³ówkowe i biblioteki potrzebne do rozwoju oprogramowania
-operuj±cego na systemie plików reiserfs.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe i biblioteki potrzebne do rozwoju oprogramowania
+operujÄ…cego na systemie plikÃ³w reiserfs.
 
 %package static
 Summary:	Static reiserfs software libraries
-Summary(pl):	Biblioteki statyczne do reiserfs
+Summary(pl.UTF-8):   Biblioteki statyczne do reiserfs
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static reiserfs software libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne do reiserfs.
 
 %prep
