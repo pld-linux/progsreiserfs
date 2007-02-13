@@ -1,6 +1,6 @@
 %define		_rc	rc8
 Summary:	Programs needed for manipulating reiserfs partitions
-Summary(pl.UTF-8):   Programy niezbędne do manipulowania partycjami reiserfs
+Summary(pl.UTF-8):	Programy niezbędne do manipulowania partycjami reiserfs
 Name:		progsreiserfs
 Version:	0.3.1
 Release:	1.%{_rc}.5
@@ -32,7 +32,7 @@ rozmiaru i kopiowanie systemu plików reiserfs.
 
 %package devel
 Summary:	Header files and libraries to develop reiserfs software
-Summary(pl.UTF-8):   Pliki nagłówkowe i biblioteki do reiserfs
+Summary(pl.UTF-8):	Pliki nagłówkowe i biblioteki do reiserfs
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -46,7 +46,7 @@ operującego na systemie plików reiserfs.
 
 %package static
 Summary:	Static reiserfs software libraries
-Summary(pl.UTF-8):   Biblioteki statyczne do reiserfs
+Summary(pl.UTF-8):	Biblioteki statyczne do reiserfs
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
