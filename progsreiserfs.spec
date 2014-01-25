@@ -3,7 +3,7 @@ Summary:	Programs needed for manipulating reiserfs partitions
 Summary(pl.UTF-8):	Programy niezbędne do manipulowania partycjami reiserfs
 Name:		progsreiserfs
 Version:	0.3.1
-Release:	1.%{_rc}.5
+Release:	1.%{_rc}.6
 License:	GPL
 Group:		Applications/System
 Source0:	http://reiserfs.linux.kiev.ua/snapshots/%{name}-%{version}-%{_rc}.tar.gz
@@ -102,13 +102,17 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS BUGS ChangeLog NEWS README THANKS TODO
 %attr(755,root,root) %{_sbindir}/cpfs.reiserfs
-%attr(755,root,root) %{_libdir}/lib*.so.*.*
+%attr(755,root,root) %{_libdir}/libdal-0.3.so.*.*
+%attr(755,root,root) %{_libdir}/libreiserfs-0.3.so.*.*
+%attr(755,root,root) %ghost %{_libdir}/libdal-0.3.so.0
+%attr(755,root,root) %ghost %{_libdir}/libreiserfs-0.3.so.0
 %{_mandir}/man8/cpfs.reiserfs.8*
 %{_mandir}/man8/reiserfs.8*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
+%attr(755,root,root) %{_libdir}/libdal.so
+%attr(755,root,root) %{_libdir}/libreiserfs.so
 %{_libdir}/lib*.la
 %{_includedir}/dal
 %{_includedir}/reiserfs
