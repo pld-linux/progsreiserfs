@@ -17,7 +17,7 @@ Patch4:		%{name}-missing-nls.patch
 URL:		http://reiserfs.linux.kiev.ua/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	gettext-devel
+BuildRequires:	gettext-tools
 BuildRequires:	libtool >= 1:1.4.2-9
 BuildRequires:	libuuid-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
