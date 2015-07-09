@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Programy niezbędne do manipulowania partycjami reiserfs
 Name:		progsreiserfs
 Version:	0.3.1
 %define		subver	rc8
-Release:	1.%{subver}.7
+Release:	1.%{subver}.8
 License:	GPL
 Group:		Applications/System
 Source0:	http://reiserfs.linux.kiev.ua/snapshots/%{name}-%{version}-%{subver}.tar.gz
