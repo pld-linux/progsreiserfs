@@ -1,0 +1,20 @@
+--- progsreiserfs-0.3.1-rc8/progsreiserfs/libmisc/tools.c.orig	2026-03-09 12:55:44.689695303 +0100
++++ progsreiserfs-0.3.1-rc8/progsreiserfs/libmisc/tools.c	2026-03-09 12:55:44.696361970 +0100
+@@ -79,7 +79,7 @@
+     vsprintf(mess, format, args);
+     va_end(args);
+ 	
+-    fprintf(stderr, mess);
++    fprintf(stderr, "%s", mess);
+     fflush(stderr);
+ 	
+     do {
+@@ -92,7 +92,7 @@
+ 	    break;
+ 		
+ 	if (prompts < 2) {
+-	    fprintf(stderr, error);
++	    fprintf(stderr, "%s", error);
+ 	    fflush(stderr);
+ 	}	
+     } while (prompts++ < 2);

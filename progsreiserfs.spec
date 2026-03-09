@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Programy niezbędne do manipulowania partycjami reiserfs
 Name:		progsreiserfs
 Version:	0.3.1
 %define		subver	rc8
-Release:	1.%{subver}.8
+Release:	1.%{subver}.9
 License:	GPL
 Group:		Applications/System
 Source0:	http://reiserfs.linux.kiev.ua/snapshots/%{name}-%{version}-%{subver}.tar.gz
@@ -15,6 +15,8 @@ Patch2:		%{name}-typo.patch
 Patch3:		%{name}-am18.patch
 Patch4:		%{name}-missing-nls.patch
 Patch5:		%{name}-file-read.patch
+Patch6:		%{name}-format-security.patch
+Patch7:		%{name}-modern-autotools.patch
 URL:		http://reiserfs.linux.kiev.ua/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -65,15 +67,17 @@ Biblioteki statyczne do reiserfs.
 %patch -P3 -p1
 %patch -P4 -p1
 %patch -P5 -p1
-
+%patch -P6 -p1
 cp -f %{SOURCE1} po/pl.po
 %{__perl} -pi -e 's/(ALL_LINGUAS=")/$1pl /' configure.in
+%patch -P7 -p1
+echo pl > po/LINGUAS
 
 %build
 # supplied libtool is broken (relink)
 %{__libtoolize}
 %{__gettextize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__automake}
 %configure \

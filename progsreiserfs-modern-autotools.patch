@@ -1,0 +1,37 @@
+--- progsreiserfs-0.3.1-rc8/configure.in.orig	2026-03-09 13:04:11.576361988 +0100
++++ progsreiserfs-0.3.1-rc8/configure.in	2026-03-09 13:04:11.585520831 +0100
+@@ -91,7 +91,7 @@
+ AC_PROG_RANLIB
+ 
+ AC_SYS_LARGEFILE
+-CFLAGS="$CFLAGS -D_FILE_OFFSET_BITS=${ac_cv_sys_file_offset_bits}"
++CFLAGS="$CFLAGS "
+ AC_CHECK_SIZEOF(off_t, 64, [
+ 	#include <stdio.h>
+ 	#include <sys/types.h>
+@@ -103,7 +103,7 @@
+ 
+ dnl Initialize i18n:
+ ALL_LINGUAS="pl "
+-AM_GNU_GETTEXT
++AM_GNU_GETTEXT([external])
+ CFLAGS="$CFLAGS -DLOCALEDIR=\"\\\"$datadir/locale\\\"\""
+ 
+ dnl One day, gettext might support libtool...
+@@ -156,7 +156,7 @@
+     CFLAGS="$CFLAGS -g"
+ fi
+ 
+-CFLAGS="$CFLAGS -W -Wall -Wno-unused -Wno-switch -Wno-format"
++CFLAGS="$CFLAGS -W -Wall -Wno-unused -Wno-switch"
+ if test x$enable_Werror = xyes; then
+     CFLAGS="$CFLAGS -Werror"
+ fi
+@@ -186,7 +186,6 @@
+     debug/test
+     doc/Makefile
+     po/Makefile.in
+-    intl/Makefile
+     progsreiserfs.spec
+ ])
+ 
